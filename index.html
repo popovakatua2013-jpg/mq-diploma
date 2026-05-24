@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MQ diplom</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div class="page-wrapper">
-    
+
   <header class="site-header">
     <div class="container">
       <div class="header-top">
@@ -33,7 +33,7 @@
           </ul>
         </nav>
       </div>
-      
+
       <h1 class="header-title">Блог о творчестве, спорте, и образе жизни</h1>
     </div>
   </header>
@@ -89,7 +89,6 @@
             <time datetime="2019-06-10" class="post-date">10 июня 2019</time>
             <span class="post-author">Неизвестный автор</span>
           </div>
-
           <p class="post-text">Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел, запущены фонтаны города… Музеи еще закрыты. Что посмотреть?</p>
         </div>
       </article>
@@ -244,7 +243,11 @@
     <h2 class="section-title">Наши изделия</h2>
     <div class="shop-grid">
       <article class="shop-card">
-        <img src="images/shop-item-desk1.jpg" alt="Подушки" class="shop-card-image">
+        <picture>
+          <source media="(max-width: 640px)" srcset="images/shop-item-mobile1.jpg">
+          <source media="(max-width: 1200px)" srcset="images/shop-item-tablet1.jpg">
+          <img src="images/shop-item-desk1.jpg" alt="Подушки" class="shop-card-image">
+        </picture>
         <div class="shop-card-content">
           <h3 class="shop-card-title"><a href="#0" class="shop-card-link">Подушки на диван</a></h3>
           <p class="shop-card-desc">Набор из двух подушек с модными принтами. Видео о создании здесь.</p>
@@ -254,7 +257,11 @@
       </article>
 
       <article class="shop-card">
-        <img src="images/shop-item-desk2.jpg" alt="Кукла" class="shop-card-image">
+        <picture>
+          <source media="(max-width: 640px)" srcset="images/shop-item-mob2.jpg">
+          <source media="(max-width: 1200px)" srcset="images/shop-item-tablet2.jpg">
+          <img src="images/shop-item-desk2.jpg" alt="Кукла" class="shop-card-image">
+        </picture>
         <div class="shop-card-content">
           <h3 class="shop-card-title"><a href="#0" class="shop-card-link">Кукла "Зайчик"</a></h3>
           <p class="shop-card-desc">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена весенняя серия постов в блоге и несколько подкастов.</p>
@@ -264,7 +271,11 @@
       </article>
 
       <article class="shop-card">
-        <img src="images/shop-item-desk3.jpg" alt="Рамка" class="shop-card-image">
+        <picture>
+          <source media="(max-width: 640px)" srcset="images/shop-item-mobile3.jpg">
+          <source media="(max-width: 1200px)" srcset="images/shop-item-tablet3.jpg">
+          <img src="images/shop-item-desk3.jpg" alt="Рамка" class="shop-card-image">
+        </picture>
         <div class="shop-card-content">
           <h3 class="shop-card-title"><a href="#0" class="shop-card-link">Шестигранная рамка</a></h3>
           <p class="shop-card-desc">Уникальная рамка для фотографий в форме шестигранника. Материал — натуральное дерево.</p>
@@ -276,31 +287,31 @@
   </section>
 
   <div class="feedback-overlay _hidden" id="feedbackModal">
-  <div class="feedback-modal">
-    <button type="button" class="feedback-close" aria-label="Закрыть окно">&times;</button>
-    <h2 class="feedback-title">Ваш фидбэк</h2>
-    <form class="feedback-form">
-      <label for="visit-frequency">Как часто вы заходите на сайт?</label>
-         <select id="visit-frequency" name="frequency" class="feedback-select" required>
-        <option value="almost-every-day" selected>Почти каждый день</option>
-        <option value="every-day">Каждый день</option>
-        <option value="once-week">Раз в неделю</option>
-        <option value="once-month">Раз в месяц</option>
-      </select>
+    <div class="feedback-modal">
+      <button type="button" class="feedback-close" aria-label="Закрыть окно">&times;</button>
+      <h2 class="feedback-title">Ваш фидбэк</h2>
+      <form class="feedback-form">
+        <label for="visit-frequency">Как часто вы заходите на сайт?</label>
+        <select id="visit-frequency" name="frequency" class="feedback-select" required>
+          <option value="almost-every-day" selected>Почти каждый день</option>
+          <!-- <option value="every-day">Каждый день</option>
+          <option value="once-week">Раз в неделю</option>
+          <option value="once-month">Раз в месяц</option> -->
+        </select>
 
-      <label>Вы подписаны на e-mail рассылку?</label>
-      <div class="feedback-radios">
-        <label class="feedback-radio-label"><input type="radio" name="subscription" value="yes" checked><span>Да</span></label>
-        <label class="feedback-radio-label"><input type="radio" name="subscription" value="no"><span>Нет</span></label>
-      </div>
-      
-      <label for="content-wishes">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
-      <textarea id="content-wishes" name="wishes" rows="4" placeholder="Может, больше рецептов?"></textarea>
-      
-      <button type="submit" class="feedback-submit">Отправить</button>
-    </form>
+        <label>Вы подписаны на e-mail рассылку?</label>
+        <div class="feedback-radios">
+          <label class="feedback-radio-label"><input type="radio" name="subscription" value="yes" checked><span>Да</span></label>
+          <label class="feedback-radio-label"><input type="radio" name="subscription" value="no"><span>Нет</span></label>
+        </div>
+
+        <label for="content-wishes">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
+        <textarea id="content-wishes" name="wishes" rows="4" placeholder="Может, больше рецептов?"></textarea>
+
+        <button type="submit" class="feedback-submit">Отправить</button>
+      </form>
+    </div>
   </div>
-</div>
 
   <footer class="footer">
     <div class="social-section">
